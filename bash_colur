@@ -1,0 +1,9 @@
+user=$(whoami)
+if [ $user == 'root' ]
+then
+PS1="$(tput setaf 195)[\u:$(tput setaf 198)\w$(tput sgr0)]# $(tput sgr0)"
+else
+PS1="$(tput setaf 195)[\u:$(tput setaf 198)\w$(tput sgr0)]"
+PS1+="$ "
+PS1+=$(tput sgr0)
+fi
